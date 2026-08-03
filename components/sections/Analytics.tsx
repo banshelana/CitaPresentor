@@ -6,11 +6,12 @@ import {
   Users,
   CalendarDays,
   Wallet,
-  ArrowUpRight,
 } from "lucide-react";
 
 import GlassCard from "@/components/ui/GlassCard";
 import SectionHeader from "@/components/ui/SectionHeader";
+import KPI from "@/components/dashboard/KPI";
+import RevenueChart from "@/components/charts/RevenueChart";
 
 const stats = [
   {
@@ -55,54 +56,26 @@ export default function Analytics() {
 
         <div className="grid gap-6 lg:grid-cols-4">
 
-          {stats.map((item, index) => {
-            const Icon = item.icon;
+          {stats.map((item, index) => (
 
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * .08 }}
-                viewport={{ once: true }}
-              >
-                <GlassCard className="p-6">
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * .08 }}
+              viewport={{ once: true }}
+            >
 
-                  <div className="flex items-center justify-between">
+              <KPI
+                title={item.title}
+                value={item.value}
+                growth={item.growth}
+                icon={item.icon}
+              />
 
-                    <div className="rounded-xl bg-violet-600/20 p-3">
+            </motion.div>
 
-                      <Icon className="text-violet-400" />
-
-                    </div>
-
-                    <span className="flex items-center gap-1 text-green-400 text-sm">
-
-                      {item.growth}
-
-                      <ArrowUpRight size={14} />
-
-                    </span>
-
-                  </div>
-
-                  <div className="mt-6 text-4xl font-black">
-
-                    {item.value}
-
-                  </div>
-
-                  <div className="mt-2 text-zinc-400">
-
-                    {item.title}
-
-                  </div>
-
-                </GlassCard>
-
-              </motion.div>
-            );
-          })}
+          ))}
 
         </div>
 
@@ -126,31 +99,7 @@ export default function Analytics() {
 
             </div>
 
-            <div className="flex h-72 items-end gap-4">
-
-              {chart.map((value, index) => (
-
-                <motion.div
-                  key={index}
-                  initial={{
-                    height: 0,
-                  }}
-                  whileInView={{
-                    height: value,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: index * .05,
-                    duration: .6,
-                  }}
-                  className="flex-1 rounded-t-xl bg-gradient-to-t from-violet-600 to-cyan-500"
-                />
-
-              ))}
-
-            </div>
+            <RevenueChart />
 
           </GlassCard>
 

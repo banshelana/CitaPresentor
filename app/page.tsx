@@ -13,6 +13,8 @@ import AdminDashboard from "@/components/sections/AdminDashboard";
 import OwnerDashboard from "@/components/sections/OwnerDashboard";
 import CustomerApp from "@/components/sections/CustomerApp";
 import Analytics from "@/components/sections/Analytics";
+import ApiArchitecture from "@/components/sections/ApiArchitecture";
+import TechStack from "@/components/sections/TechStack";
 
 export default function HomePage() {
   return (
@@ -46,6 +48,10 @@ export default function HomePage() {
         <CustomerApp />
 
         <Analytics />
+
+        <ApiArchitecture />
+
+        <TechStack />
 
       </main>
 

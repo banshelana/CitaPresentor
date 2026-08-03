@@ -12,6 +12,7 @@ import {
 
 import GlassCard from "@/components/ui/GlassCard";
 import SectionHeader from "@/components/ui/SectionHeader";
+import BrowserFrame from "../mockup/BrowserFrame";
 
 const stats = [
   {
@@ -69,7 +70,7 @@ export default function AdminDashboard() {
           description="نمایی از پنل مدیریت برای نظارت بر سالن‌ها، کاربران، رزروها و گزارش‌های مالی."
         />
 
-        <GlassCard className="overflow-hidden p-8">
+        <BrowserFrame>
 
           <div className="mb-8 flex items-center justify-between">
 
@@ -206,7 +207,7 @@ export default function AdminDashboard() {
 
           </div>
 
-        </GlassCard>
+        </BrowserFrame>
 
       </div>
 
