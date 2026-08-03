@@ -117,20 +117,35 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
+@font-face {
+  font-family: 'Yekan';
+  src: url('/fonts/Yekan.woff2') format('woff2'),
+       url('/fonts/Yekan.woff') format('woff'),
+       url('/fonts/Yekan.ttf') format('truetype'),
+       url('/fonts/Yekan.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Yekan', sans-serif;
   }
   html {
     @apply font-sans;
+    font-family: 'Yekan', sans-serif;
   }
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Yekan', sans-serif;
 }
 
 ::selection {
@@ -140,4 +155,5 @@ html {
 
 body {
   background: #09090b;
+  font-family: 'Yekan', sans-serif;
 }
