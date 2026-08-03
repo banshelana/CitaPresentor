@@ -128,3 +128,16 @@
     @apply font-sans;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #7c3aed;
+  color: white;
+}
+
+body {
+  background: #09090b;
+}
