@@ -4,6 +4,15 @@ import Introduction from "@/components/sections/Introduction";
 import Features from "@/components/sections/Features";
 import Footer from "@/components/layout/Footer";
 import Stats from "@/components/sections/Stats";
+import Architecture from "@/components/sections/Architecture";
+import UserRoles from "@/components/sections/UserRoles";
+import BookingFlow from "@/components/sections/BookingFlow";
+import SystemModules from "@/components/sections/SystemModules";
+import Security from "@/components/sections/Security";
+import AdminDashboard from "@/components/sections/AdminDashboard";
+import OwnerDashboard from "@/components/sections/OwnerDashboard";
+import CustomerApp from "@/components/sections/CustomerApp";
+import Analytics from "@/components/sections/Analytics";
 
 export default function HomePage() {
   return (
@@ -19,6 +28,24 @@ export default function HomePage() {
         <Introduction />
 
         <Features />
+
+        <Architecture />
+
+        <UserRoles />
+
+        <BookingFlow />
+
+        <SystemModules />
+
+        <Security />
+
+        <AdminDashboard />
+
+        <OwnerDashboard />
+
+        <CustomerApp />
+
+        <Analytics />
 
       </main>
 
