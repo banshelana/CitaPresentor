@@ -139,7 +139,7 @@ export default function ApiArchitecture() {
 
               </div>
 
-              PostgreSQL
+              SQL
 
             </GlassCard>
 

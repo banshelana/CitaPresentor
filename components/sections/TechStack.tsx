@@ -14,7 +14,7 @@ const stack = [
   "ASP.NET Core",
   "REST API",
   "JWT",
-  "PostgreSQL",
+  "SQL",
   "Redis",
   "SignalR",
   "Docker",

@@ -5,12 +5,14 @@ import { ArrowLeft, Calendar, MapPin, ShieldCheck } from "lucide-react";
 import DashboardPreview from "@/components/dashboard/DashboardPreview";
 import AuroraBackground from "@/components/effects/AuroraBackground";
 import MouseGlow from "@/components/effects/MouseGlow";
+import FloatingOrbs from "../effects/FloatingOrbs";
 
 export default function Hero() {
     return (
         <section className="relative overflow-hidden bg-zinc-950 pt-36 pb-24">
 
             <AuroraBackground />
+            <FloatingOrbs />
              <MouseGlow />
 
 

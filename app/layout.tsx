@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollProgress from "@/components/effects/ScrollProgress";
+import ScrollToTop from "@/components/effects/ScrollToTop";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -30,7 +32,9 @@ export default function RootLayout({
       className={`h-full antialiased`}
     >
       <body className="min-h-screen bg-zinc-950 text-white">
+        <ScrollProgress />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

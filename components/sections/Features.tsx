@@ -11,6 +11,7 @@ import {
     BarChart3,
     Boxes,
 } from "lucide-react";
+import Spotlight from "../effects/Spotlight";
 
 const features = [
     {
@@ -53,49 +54,52 @@ export default function Features() {
         >
             <div className="mx-auto max-w-7xl px-6">
 
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <SectionHeader
-                        badge="امکانات کلیدی"
-                        title="چرا این سامانه؟"
-                        description="طراحی مدرن، معماری توسعه‌پذیر و امکانات حرفه‌ای برای مدیریت کامل سالن‌های زیبایی."
-                    />
-                </motion.div>
-
+                <Spotlight>
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <SectionHeader
+                            badge="امکانات کلیدی"
+                            title="چرا این سامانه؟"
+                            description="طراحی مدرن، معماری توسعه‌پذیر و امکانات حرفه‌ای برای مدیریت کامل سالن‌های زیبایی."
+                        />
+                    </motion.div>
+                </Spotlight>
                 <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
 
                         return (
-                            <motion.div
-                                key={feature.title}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{
-                                    delay: index * 0.08,
-                                }}
-                            >
-                                <GlassCard className="group h-full p-8">
+                            <Spotlight>
+                                <motion.div
+                                    key={feature.title}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        delay: index * 0.08,
+                                    }}
+                                >
+                                    <GlassCard className="group h-full p-8">
 
-                                    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 text-white transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                                        <Icon size={30} />
-                                    </div>
+                                        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 text-white transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
+                                            <Icon size={30} />
+                                        </div>
 
-                                    <h3 className="mb-4 text-2xl font-bold">
-                                        {feature.title}
-                                    </h3>
+                                        <h3 className="mb-4 text-2xl font-bold">
+                                            {feature.title}
+                                        </h3>
 
-                                    <p className="leading-8 text-zinc-400">
-                                        {feature.description}
-                                    </p>
+                                        <p className="leading-8 text-zinc-400">
+                                            {feature.description}
+                                        </p>
 
-                                </GlassCard>
-                            </motion.div>
+                                    </GlassCard>
+                                </motion.div>
+                            </Spotlight>
                         );
                     })}
 

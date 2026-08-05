@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import CountUp from "../effects/CountUp";
 
 const stats = [
   { value: "+250", label: "سالن فعال" },
@@ -27,7 +28,8 @@ export default function Stats() {
               className="text-center"
             >
               <h3 className="text-4xl font-black bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                {item.value}
+                {/* {item.value} */}
+                <CountUp value={parseInt(item.value)} />
               </h3>
 
               <p className="mt-2 text-sm text-zinc-400">

@@ -30,7 +30,7 @@ const nodes = [
     icon: Server,
   },
   {
-    title: "PostgreSQL",
+    title: "SQL",
     subtitle: "Database",
     icon: Database,
   },

@@ -15,6 +15,11 @@ import CustomerApp from "@/components/sections/CustomerApp";
 import Analytics from "@/components/sections/Analytics";
 import ApiArchitecture from "@/components/sections/ApiArchitecture";
 import TechStack from "@/components/sections/TechStack";
+import InteractiveMap from "@/components/sections/InteractiveMap";
+import BookingCalendar from "@/components/sections/BookingCalendar";
+import MobileShowcase from "@/components/sections/MobileShowcase";
+import AdminPreviewSection from "@/components/sections/AdminPreviewSection";
+import ReservationDemo from "@/components/reservation/ReservationDemo";
 
 export default function HomePage() {
   return (
@@ -49,9 +54,19 @@ export default function HomePage() {
 
         <Analytics />
 
+        <AdminPreviewSection />
+
         <ApiArchitecture />
 
         <TechStack />
+
+        <InteractiveMap />
+
+        <BookingCalendar />
+
+        <ReservationDemo />
+
+        <MobileShowcase />
 
       </main>
 
